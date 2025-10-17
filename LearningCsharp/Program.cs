@@ -72,8 +72,31 @@ class Program
                     break;
 
             }
+
+            // ---- For loop ----
+
+            Console.WriteLine("\n--- For Loop Example ---");
+            Console.WriteLine("Counting from 1 to 5");
+            for (int i = 1; i <= 5; i++)
+            {
+                Console.WriteLine("Number: " + i);
+            }
+
+            // --- Foreach Loop ----
+
+            Console.WriteLine("\n--- Foreach Loop Example ---");
+            string[] langauge = { "C#", "Java", "Python", "PHP", "Javascript" };
+            Console.WriteLine("Here are some popular programming langauge:");
+            foreach (string lang in langauge)
+            {
+                Console.WriteLine("- " + lang);
+            }
+
+
             Console.Write("\nDo you want to try again? (yes/no): ");
             answer = Console.ReadLine().ToLower();
+
+            Console.WriteLine();
 
         } while (answer == "yes");
 
