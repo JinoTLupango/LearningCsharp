@@ -4,9 +4,9 @@ class Program
 {
     public static void Main()
     {
-        string answer;
+        bool keepRunning = true;
 
-        do
+        while (keepRunning)
         {
             // nangayo og pangan
             Console.Write("Enter your name: ");
@@ -73,9 +73,14 @@ class Program
 
             }
             Console.Write("\nDo you want to try again? (yes/no): ");
-            answer = Console.ReadLine().ToLower();
+            string answer = Console.ReadLine().ToLower();
 
-        } while (answer == "yes");
-        Console.WriteLine("Thank you for using the program! Goodbye!");
+            if (answer != "yes")
+            {
+                keepRunning = false;
+            }
+            Console.WriteLine();
+        }
+        Console.WriteLine("Thank you for using the Program! Goodbye!");
     }
 }
